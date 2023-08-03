@@ -1,0 +1,23 @@
+<!DOCTYPE html> 
+<html>
+    <script>
+        let input = prompt("What's your password?");
+        const checkCredentials = new Promise(function(resolve, reject) {
+            if (input == "JavaScriptCoding") {
+                setTimeout(function() {
+                    resolve("Access Granted");
+                }, 3000);
+            }
+            else {
+                setTimeout(function() {
+                    reject("Access Denied");
+                }, 3000);
+            }
+        });
+        checkCredentials.then(function(output){
+            alert(output);
+        }).catch(function(error) {
+            alert(error);
+        });
+    </script>
+</html>
